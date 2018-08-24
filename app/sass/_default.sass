@@ -1,0 +1,33 @@
+html, 
+body
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	width: 100%
+	height: 100%
+	font-size: 10px
+
+.wrapper
+	overflow: hidden
+
+.container
+	max-width: 1170px
+	overflow: hidden
+	margin: 0 auto
+
+.scroll-top
+	position: fixed
+	bottom: 5%
+	left: 2%
+	text-decoration: none
+	font-size: 24px
+	padding: 15px 20px
+	border-radius: 50%
+	background: rgba(136, 136, 136, 0.1)
+	color: rgba(25, 25, 25, 0.1)
+	z-index: 9999
+	display: none
+	transition: .4s ease
+	&:hover
+		background: rgba(136, 136, 136, 1)
+		color: rgba(25, 25, 25, 1)
