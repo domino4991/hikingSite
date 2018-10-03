@@ -1,4 +1,24 @@
 $(function() {
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    dots: true,
+    dotsContainer: '.dots',
+    nav: true,
+    navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    items: 1,
+    animateOut: 'zoomOut',
+    animateIn: 'zoomIn',
+    navSpeed: 2000
+  })
+
+  $('.event__btn').on('click', function(e) {
+    e.preventDefault();
+  })
+
+  // $('.dots__button').on('click', function (e) {
+  //   e.preventDefault;
+  //   $(this).toggleClass('dots-active')
+  // })
   //  $('.hamburger').on('click', function() {
   //    $(this).toggleClass('is-active');
   //    $('.top-line__nav').toggleClass('if-active');
@@ -33,4 +53,15 @@ $(function() {
     //     });
     //   }
     // });
+    let map;
+
+    DG.then(function () {
+        map = DG.map('map', {
+            center: [42.842088, 74.621858],
+            zoom: 16
+        });
+
+        DG.marker([42.842088, 74.621858]).addTo(map).bindPopup('Hiking Travel').bindLabel('Hiking Travel', {static: true});
+
+    });
 });
