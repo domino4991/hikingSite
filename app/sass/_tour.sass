@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .tour
   background: #f6f6f8
   padding-top: 9rem
@@ -52,4 +53,62 @@
 
 .tours__item:hover .descrip
   transform: scale(1, 1)
+=======
+.tour
+  background: #f6f6f8
+  padding-top: 9rem
+  margin-top: 11rem
+
+.tours__desc
+  margin: 4rem 0 13rem 0
+
+.tours
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  position: relative
+  z-index: 5
+  &__item
+    width: 31%
+    position: relative
+    padding: 10rem 2rem
+    height: 23rem
+    +media(laptop)
+      width: 30%
+  &__caption
+    +use-latoFont(2rem, $secondCaptionColor, 700)
+    text-transform: uppercase
+    margin: 3rem 0 3rem 0
+  &__img
+    height: 92px
+
+.tour__desc
+  margin: 0
+  color: #fff1f5
+
+.toursbg
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.descrip
+  background: rgba(0, 0, 0, 0)
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 7
+  padding: 10rem 2rem
+  transform: scale(0, 0)
+  transition: transform 1s ease, background 1s ease .7s
+
+.tours__item:hover .descrip
+  transform: scale(1, 1)
+>>>>>>> 0c77d9741697313920b63a94cddbaee4ddef561a
   background: rgba(0, 0, 0, 0.7)
