@@ -1,0 +1,54 @@
+.testimonials
+  padding: 12rem 0 8.5rem 0
+  
+.testimo__img
+  width: 13rem !important
+  height: 15rem !important
+  margin: 0 auto
+  position: relative
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+  img
+    height: 100%
+
+.testimonial
+  width: 62rem
+  margin: 8.5rem auto 0 auto
+  &__name
+    +use-latoFont(2rem, $secondCaptionColor, 700)
+    text-transform: uppercase
+    margin-top: 3.2rem
+  &__desc
+    margin-bottom: 6.5rem
+
+.owl-dot
+  width: 15px
+  height: 15px
+  border-radius: 50%
+  background: #cccccc
+  border: none
+  outline: none
+  margin-right: 5px
+  &:last-child
+    margin: 0
+
+.dots-active
+  background: #d5423a
+  outline: none
+
+.fa-angle-left,
+.fa-angle-right
+  font-size: 10rem
+  color: $btnColor
+  outline: none
+
+.owl-prev,
+.owl-next
+  position: absolute
+  top: 50%
+
+.owl-prev
+  left: 0
+
+.owl-next
+  right: 0
