@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 .event
-  background: url(../img/upload/eventsbg.jpg) no-repeat
-  background-size: cover
+  // background: url(../img/upload/eventsbg.jpg) no-repeat
+  // background-size: cover
   position: relative
   padding: 12.5rem 0
   &:before
@@ -26,14 +25,27 @@
   position: relative
   z-index: 5
   margin-top: 6rem
+  +media(interval2)
+    flex-direction: column
+    align-items: center
   &__item
     width: 32%
     background: rgba(0, 0, 0, .8)
     text-align: left
+    +media(interval2)
+      margin-top: 3rem
+    +media(interval)
+      width: 45%
+    +media(tablet)
+      width: 70%
+    +media(interval3)
+      width: 100%
   &__caption
     +use-latoFont(2rem, $secondCaptionColor, 700)
     text-transform: uppercase
     margin: 3.5rem 0 2.5rem 0
+    +media(interval2)
+      font-size: 1.6rem
   img
     width: 100%
     object-fit: cover
@@ -50,6 +62,8 @@
   list-style: none
   +use-sourceSansFont(1.6rem, $lightText, 400)
   margin-bottom: 1.1rem
+  +media(interval2)
+    font-size: 1.2rem
   &:last-child
     margin-bottom: 3rem
 
@@ -76,83 +90,4 @@
 .span-btn
   position: absolute
   top: 15px
-=======
-.event
-  background: url(../img/upload/eventsbg.jpg) no-repeat
-  background-size: cover
-  position: relative
-  padding: 12.5rem 0
-  &:before
-    content: ''
-    width: 100%
-    height: 100%
-    display: block
-    background: #333333
-    opacity: 0.3
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-  &__caption
-    color: $lightText
-
-.events
-  display: flex
-  justify-content: space-between
-  flex-wrap: wrap
-  position: relative
-  z-index: 5
-  margin-top: 6rem
-  &__item
-    width: 32%
-    background: rgba(0, 0, 0, .8)
-    text-align: left
-  &__caption
-    +use-latoFont(2rem, $secondCaptionColor, 700)
-    text-transform: uppercase
-    margin: 3.5rem 0 2.5rem 0
-  img
-    width: 100%
-    object-fit: cover
-  &__list
-    margin: 0
-    padding: 0
-
-.description
-  padding-left: 4rem
-  overflow: hidden
-  position: relative
-
-.list__item
-  list-style: none
-  +use-sourceSansFont(1.6rem, $lightText, 400)
-  margin-bottom: 1.1rem
-  &:last-child
-    margin-bottom: 3rem
-
-.fa-calendar,
-.fa-map-marker,
-.fa-users
-  margin-right: 1rem
-
-.fa-map-marker
-  margin-right: 1.7rem
-
-.event__btn
-  text-decoration: none
-  font-size: 2.5rem
-  font-weight: bold
-  color: $lightText
-  padding: 40px 40px
-  background: $btnColor
-  border-radius: 50%
-  position: absolute
-  bottom: -17%
-  right: -9%
-
-.span-btn
-  position: absolute
-  top: 15px
->>>>>>> 0c77d9741697313920b63a94cddbaee4ddef561a
   left: 20px
