@@ -1,5 +1,7 @@
 .contact
-  padding-top: 12.5rem
+  padding-top: 9rem
+  +media(tablet)
+    padding-top: 7rem
   
 .contact__info
   display: flex
@@ -9,9 +11,19 @@
   margin-top: 5rem
   +media(laptop)
     margin-bottom: 5rem
+  +media(tablet)
+    flex-direction: column
+    align-items: center
 
 .info__item
   width: 49%
+  +media(tablet)
+    width: 70%
+    margin-bottom: 5rem
+  &:last-child
+    margin-bottom: 0rem
+  +media(interval3)
+    width: 100%
 
 #map
   width: 100%
@@ -63,7 +75,8 @@
 #phone,
 #email,
 #tour-package,
-#user-message
+#user-message,
+#members
   width: 60%
   border: none
   border-bottom: 1px solid #cccccc
@@ -78,9 +91,6 @@
   border: none
   font-size: 1.2rem
   padding: 1rem 5rem
-  margin-right: 5rem
   cursor: pointer
-  outline: none
-  &:last-child
-    margin-right: 0
-    margin-left: 5rem
+  outline: nonem
+  margin-top: 3rem

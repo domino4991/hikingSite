@@ -4,16 +4,7 @@
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width"/>
-		<title>Hiking Travel</title> 
-		<link rel="apple-touch-icon" sizes="180x180" href="img\favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="img\favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="img\favicon/favicon-16x16.png">
-		<link rel="manifest" href="img\favicon/site.webmanifest">
-		<link rel="mask-icon" href="img\favicon/safari-pinned-tab.svg" color="#000000">
-		<link rel="shortcut icon" href="img\favicon/favicon.ico">
-		<meta name="msapplication-TileColor" content="#000000">
-		<meta name="msapplication-config" content="img\favicon/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
+		<title>Hiking Travel</title>
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,700|Source+Sans+Pro" rel="stylesheet">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/owl.carousel.css">
@@ -21,9 +12,6 @@
 		<link rel="stylesheet" href="css/style.min.css?rev=@@hash"/>
 		<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 		<script src="js/libs.min.js"></script>
-		<script src="js/jquery.maskedinput.min.js"></script>
-		<script src="js/parallax.min.js"></script>
-		<script src="js/wow.min.js"></script>
 		<script src="js/common.js"></script>
 	</head>
 	<body>
@@ -37,7 +25,7 @@
 						</span>
 					</button>
 				</div>
-				<header class="header">
+				<header class="header" id="header">
 					<div class="container">
 						<nav class="nav">
 							<ul class="nav__list">
@@ -45,10 +33,10 @@
 									<a href="#" class="nav__link">Home</a>
 								</li>
 								<li class="nav__item">
-									<a href="#" class="nav__link">About</a>
+									<a href="#about" class="nav__link">About</a>
 								</li>
 								<li class="nav__item">
-									<a href="#" class="nav__link">Our tours</a>
+									<a href="#tours" class="nav__link">Our tours</a>
 								</li>
 								<li class="nav__item">
 									<a href="#" class="logo">
@@ -56,13 +44,13 @@
 									</a>
 								</li>
 								<li class="nav__item">
-									<a href="#" class="nav__link">Testimonial</a>
+									<a href="#testimonials" class="nav__link">Testimonial</a>
 								</li>
 								<li class="nav__item">
-									<a href="#" class="nav__link">Events</a>
+									<a href="#events" class="nav__link">Events</a>
 								</li>
 								<li class="nav__item">
-									<a href="#" class="nav__link">Contact</a>
+									<a href="#contacts" class="nav__link">Contact</a>
 								</li>
 							</ul>
 						</nav>
@@ -72,17 +60,17 @@
 					<div class="container">
 						<h1 class="banner__caption wow zoomIn"><span class="banner__span-clr">life's</span> a climb but 
 								<span class="banner__span">the view is <span class="banner__span-clr">great</span></span></h1>
-						<a href="#" class="btn banner__link">Let's go together</a>
+						<button class="btn banner__link">Let's go together</button>
 					</div>
 				</div>
 			</main>
-			<section class="about">
+			<section class="about" id="about">
 				<h2 class="captions">who we are</h2>
 				<div class="container">
 					<p class="descs about__desc">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula. Pellentesque dictum augue non vestibulum ullamcorper. Donec eu placerat velit, vel malesuada libero. Vivamus sed justo turpis. Quisque vitae est non ipsum rutrum dapibus.</p>
 				</div>
 			</section>
-			<section class="tour">
+			<section class="tour" id="tours">
 				<h2 class="captions">our tour</h2>
 				<p class="descs tours__desc">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem.</p>
 				<div class="tours">
@@ -144,7 +132,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="testimonials">
+			<section class="testimonials" id="testimonials">
 				<h2 class="captions">Testimonial</h2>
 				<div class="container">
 					<div class="owl-carousel">
@@ -183,7 +171,7 @@
 					<div class="dots">
 					</div>
 			</section>
-			<section class="event parallax-window" data-speed="0.09" data-parallax="scroll" data-image-src="img/upload/eventsbg.jpg">
+			<section class="event parallax-window" id="events" data-speed="0.09" data-parallax="scroll" data-image-src="img/upload/eventsbg.jpg">
 				<h2 class="captions event__caption">Events</h2>
 				<div class="container">
 					<div class="events">
@@ -226,7 +214,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="contact">
+			<section class="contact" id="contacts">
 				<h2 class="captions">Contact</h2>
 				<div class="container">
 					<div class="contact__info">
@@ -262,7 +250,6 @@
 								<textarea name="message" id="user-message" placeholder="Your message"></textarea>
 								<p>
 									<button class="btn contact__link" type="submit">send</button>
-									<button class="btn contact__link" type="reset">reset</button>
 								</p>
 							</form>
 						</div>
@@ -292,5 +279,23 @@
 				</div>
 			</footer>
 		</div>
+		<a href="#header" class="scroll-top flowing-scroll"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+		<!-- Модальные окна -->
+		<!-- <div class="popup-sign">
+			<div class="sign-block">
+				<h4 class="sign-caption">Please provide your contact details</h4>
+				<form action="#">
+					<input type="text" name="user-name" id="name" placeholder="Name">
+					<input type="tel" name="user-phone" id="phone" placeholder="Phone Number">
+					<input type="email" name="user-mail" id="email" placeholder="E-mail">
+					<input type="text" name="tour-package" id="tour-package" placeholder="Tour package">
+					<input type="text" name="members" id="members" placeholder="Number of persons">
+					<p>
+						<button class="btn contact__link" type="submit">send</button>
+					</p>
+				</form>
+				<button class="popup-close">&#10006;</button>
+			</div>
+		</div> -->
 	</body>
 </html>
