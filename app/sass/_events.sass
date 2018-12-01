@@ -18,6 +18,17 @@
   &__caption
     color: $lightText
 
+.events-wrapper
+  width: 32%
+  +media(interval2)
+    margin-top: 3rem
+  +media(interval)
+    width: 45%
+  +media(tablet)
+    width: 70%
+  +media(interval3)
+    width: 100%
+
 .events
   display: flex
   justify-content: space-between
@@ -29,17 +40,10 @@
     flex-direction: column
     align-items: center
   &__item
-    width: 32%
+    width: 100%
     background: rgba(0, 0, 0, .8)
     text-align: left
-    +media(interval2)
-      margin-top: 3rem
-    +media(interval)
-      width: 45%
-    +media(tablet)
-      width: 70%
-    +media(interval3)
-      width: 100%
+
   &__caption
     +use-latoFont(2rem, $secondCaptionColor, 700)
     text-transform: uppercase
@@ -91,3 +95,4 @@
   position: absolute
   top: 15px
   left: 20px
+
