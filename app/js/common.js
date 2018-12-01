@@ -16,13 +16,16 @@ $(function() {
     }
   })
 
-  $('.event__btn').on('click', function(e) {
-    e.preventDefault();
-  })
-
   $('.hamburger').on('click', function() {
     $(this).toggleClass('is-active');
     $('.nav').toggleClass('nav-active');
+    $('body').toggleClass('fixed');
+  })
+
+  $('.nav__link').on('click', function() {
+    $('.hamburger').removeClass('is-active');
+    $('.nav').removeClass('nav-active');
+    $('body').removeClass('fixed');
   })
 
   $('.flowing-scroll').on( 'click', function(){ 
@@ -75,69 +78,4 @@ $(function() {
     
     $("#phone").mask("+999 (999) 999-999");
     new WOW().init();
-
-    // $('.banner__link').on('click', function(e) {
-    // //   let popupSign = $('<div/>', {
-    // //     class: 'popup-sign'
-    // //   });
-    // //   $('body').append(popupSign);
-    // //   let signBlock = $('<div/>', {
-    // //     class: 'sign-block'
-    // //   })
-    // //   $(popupSign).append(signBlock);
-    // //   $('<h4/>', {
-    // //     class: 'sign-caption',
-    // //     text: 'Please provide your contact details'
-    // //   }).appendTo(signBlock);
-    // //   $('<button/>', {
-    // //     class: 'popup-close',
-    // //     text: 'Закрыть'
-    // //   }).appendTo(signBlock);
-    // //   let form = $('<form/>',{
-    // //     action: '#'
-    // //   }).appendTo(signBlock);
-    // //   let input1 = $('<input/>', {
-    // //     type: 'text',
-    // //     name: 'user-name',
-    // //     id: 'name',
-    // //     placeholder: 'Name'
-    // //   }).appendTo(form);
-    // //   let input2 = $('<input/>', {
-    // //     type: 'tel',
-    // //     name: 'user-phone',
-    // //     id: 'phone',
-    // //     placeholder: 'Phone Number'
-    // //   }).appendTo(form);
-    // //   let input3 = $('<input/>', {
-    // //     type: 'email',
-    // //     name: 'user-mail',
-    // //     id: 'email',
-    // //     placeholder: 'E-Mail'
-    // //   }).appendTo(form);
-    // //   let input4 = $('<input/>', {
-    // //     type: 'text',
-    // //     name: 'tour-package',
-    // //     id: 'tour-package',
-    // //     placeholder: 'Tour Package'
-    // //   }).appendTo(form);
-    // //   let input5 = $('<input/>', {
-    // //     type: 'text',
-    // //     name: 'members',
-    // //     id: 'members',
-    // //     placeholder: 'Number of persons'
-    // //   }).appendTo(form);
-    // //   let p = $('<p/>').appendTo(form);
-    // //   $('<button/>', {
-    // //     class: 'btn contact__link',
-    // //     type: 'submit',
-    // //     text: 'send'
-    // //   }).appendTo(p);
-    // //   $("#phone").mask("+999 (999) 999-999");
-    // // new WOW().init();
-    // $('.popup-sign').addClass('popup-active')
-    // $('.popup-close').on('click', function(e) {
-    //   e.preventDefault();
-    //   $
-    // });
-    // });
 });
