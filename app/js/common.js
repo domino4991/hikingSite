@@ -78,4 +78,22 @@ $(function() {
     
     $("#phone").mask("+999 (999) 999-999");
     new WOW().init();
+
+    $('.events__item--front').on('click', function() {
+      $(this).css({
+        transform: 'rotateY(180deg)'
+      });
+      $(this).next().css({
+        transform: 'rotateY(360deg)'
+      })
+    });
+
+    $('.events__item--back').on('click', function() {
+      $(this).css({
+        transform: 'rotateY(180deg)'
+      });
+      $(this).prev().css({
+        transform: 'rotateY(0deg)'
+      })
+    })
 });

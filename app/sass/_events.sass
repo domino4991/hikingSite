@@ -18,8 +18,15 @@
   &__caption
     color: $lightText
 
+.flip-3d
+  position: relative
+  min-height: 650px
+
 .events-wrapper
   width: 32%
+  height: 508px
+  position: relative
+  perspective: 1000px
   +media(interval2)
     margin-top: 3rem
   +media(interval)
@@ -33,24 +40,40 @@
   display: flex
   justify-content: space-between
   flex-wrap: wrap
-  position: relative
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
   z-index: 5
   margin-top: 6rem
   +media(interval2)
     flex-direction: column
     align-items: center
-  &__item
+  &__item--front,
+  &__item--back
+    position: absolute
+    top: 0
+    left: 0
     width: 100%
+    height: 100%
     background: rgba(0, 0, 0, .8)
     text-align: left
-
-  &__caption
+    transition: 1s
+    backface-visibility: hidden
+    cursor: pointer
+    overflow: hidden
+  &__item--back
+    transform: rotateY(180deg)
+    color: #fff
+    text-align: center
+  &__caption, .caption__item--back
     +use-latoFont(2rem, $secondCaptionColor, 700)
     text-transform: uppercase
     margin: 3.5rem 0 2.5rem 0
     +media(interval2)
       font-size: 1.6rem
-  img
+  &__img
     width: 100%
     object-fit: cover
   &__list
@@ -61,6 +84,14 @@
   padding-left: 4rem
   overflow: hidden
   position: relative
+
+.item--back__descrip
+  overflow: hidden
+  width: 100%
+
+.desc__item--back
+  +use-sourceSansFont(1.6rem, $lightText, 400)
+  padding: 0 10px
 
 .list__item
   list-style: none
@@ -79,9 +110,11 @@
 .fa-map-marker
   margin-right: 1.7rem
 
-.event__btn
+.event__btn,
+.btn-back,
+.btn-back--info
   text-decoration: none
-  font-size: 2.5rem
+  font-size: 1.8rem
   font-weight: bold
   color: $lightText
   padding: 40px 40px
@@ -90,9 +123,32 @@
   position: absolute
   bottom: -17%
   right: -9%
+  transform: scale(0)
+  transition: .5s
+  border: none
+  cursor: pointer
 
-.span-btn
+.btn-back
+  bottom: -6%
+
+.btn-back--info
+  left: -9%
+  bottom: -6%
+  text-transform: uppercase
+  font-size: 1.2rem
+
+.span-btn,
+.span-btn--info
   position: absolute
   top: 15px
   left: 20px
+
+.span-btn--info
+  top: 22px
+  left: 36px
+
+.events-wrapper:hover .event__btn,
+.events-wrapper:hover .btn-back,
+.events-wrapper:hover .btn-back--info
+  transform: scale(1)
 
