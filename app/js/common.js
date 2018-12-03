@@ -95,5 +95,5 @@ $(function() {
       $(this).prev().css({
         transform: 'rotateY(0deg)'
       })
-    })
+    });
 });
